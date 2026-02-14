@@ -479,6 +479,9 @@
         .badge-sweet { background: var(--badge-dulce); color: #E74C3C; }
         .badge-fresh { background: var(--badge-fresco); color: #2C3E50; }
         .badge-marine { background: #85C1E9; color: #154360; }
+        .badge-woody { background: #A1887F; color: #4D5656; }
+        .badge-citric { background: #F7DC6F; color: #B9770E; }
+        .badge-tropical { background: #F5B041; color: white; }
 
         .product-description {
             color: var(--text-secondary);
@@ -933,8 +936,72 @@
             font-size: 0.9rem;
         }
 
+        /* Menu Toggle para móvil */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            /* Header móvil */
+            header {
+                padding: 1rem 4%;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: rgba(253, 254, 254, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            /* Hero móvil */
+            .hero {
+                padding: 100px 4% 60px;
+                min-height: 90vh;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -943,21 +1010,162 @@
                 font-size: 1.1rem;
             }
 
-            .nav-links {
-                gap: 1rem;
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
             }
 
-            .product-grid {
-                grid-template-columns: 1fr;
+            /* Secciones */
+            .catalog,
+            .how-it-works,
+            .why-section {
+                padding: 60px 4%;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            /* Filtros */
+            .filters {
+                gap: 0.75rem;
+                margin-bottom: 2rem;
+            }
+
+            .filter-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            /* Grid de productos */
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-card {
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .product-image {
+                height: 300px;
+            }
+
+            .bottle-3d {
+                width: 120px;
+                height: 240px;
+            }
+
+            .product-info {
+                padding: 1.5rem;
+            }
+
+            .product-name {
+                font-size: 1.3rem;
+            }
+
+            .product-description {
+                font-size: 0.9rem;
+            }
+
+            /* Steps y Why */
             .steps,
             .why-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .step-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+
+            .step h3 {
+                font-size: 1.4rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 50px 4% 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .newsletter-input {
+                width: 100%;
+            }
+
+            /* Modal */
+            .modal-content {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .cart-modal-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .modal-close {
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .product-image {
+                height: 280px;
+            }
+
+            .bottle-3d {
+                width: 100px;
+                height: 200px;
+            }
+
+            .product-info {
+                padding: 1.25rem;
+            }
+
+            .product-sizes {
+                gap: 0.75rem;
+            }
+
+            .size-option {
+                padding: 0.6rem;
+            }
+
+            .whatsapp-btn {
+                font-size: 1rem;
+                padding: 1rem;
             }
         }
     </style>
@@ -967,7 +1175,12 @@
     <header id="header">
         <nav>
             <div class="logo">decants R&M</div>
-            <ul class="nav-links">
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#catalogo">Catálogo</a></li>
                 <li><a href="#proceso">Proceso</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
@@ -1107,7 +1320,7 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
          // ========================================
          // CONFIGURACIÓN - ¡PERSONALIZA AQUÍ!
             // ========================================
@@ -1124,12 +1337,12 @@
                 category: 'fresh',
                 badges: ['fresh', 'marine'],
                 notes: {
-                    top: ['Marino', 'Cítrico', 'Lavanda'],
-                    heart: ['Aromático', 'Fresco especiado', 'Mineral'],
-                    base: ['Amaderado', 'Salado', 'Ámbar']
+                    top: ['Notas del Mar', 'Bergamota'],
+                    heart: ['Romero', 'Salvia', 'Geranio'],
+                    base: ['Incienso', 'Pachulí']
                 },
                 prices: { '5ml': 165, '10ml': 280 },
-                image: 'imagenes/acquadigio.jpeg',
+                image: 'imagenes/acqua.jpeg',
                 gradient: 'linear-gradient(135deg, #A9CCE3 0%, #16A085 100%)',
                 bottleColor: 'rgba(22, 160, 133, 0.3)'
             },
@@ -1140,9 +1353,9 @@
                 category: 'vanilla amber',
                 badges: ['vanilla', 'amber', 'sweet'],
                 notes: {
-                    top: ['Lavanda', 'Verde', 'Aromático'],
-                    heart: ['Vainilla', 'Miel', 'Tabaco'],
-                    base: ['Ámbar', 'Almizcle', 'Atalcado']
+                    top: ['Lavanda', 'Menta'],
+                    heart: ['Vainilla', 'Benjuí'],
+                    base: ['Miel', 'Haba Tonka', 'Tabaco']
                 },
                 prices: { '5ml': 190, '10ml': 370 },
                 image: 'imagenes/jpglemaleelixir.jpeg',
@@ -1156,9 +1369,9 @@
                 category: 'fresh vanilla',
                 badges: ['fresh', 'vanilla', 'sweet'],
                 notes: {
-                    top: ['Coco', 'Afrutados', 'Verde'],
-                    heart: ['Dulce', 'Acuático', 'Aromático'],
-                    base: ['Vainilla', 'Amaderado', 'Ámbar']
+                    top: ['Notas Verdes', 'Menta', 'Gengibre', 'Notas acuáticas'],
+                    heart: ['Coco', 'Higo', 'Sal'],
+                    base: ['Haba Tonka', 'Sándalo']
                 },
                 prices: { '5ml': 165, '10ml': 310 },
                 image: 'imagenes/jpglebeauparadise.jpeg',
@@ -1172,9 +1385,9 @@
                 category: 'vanilla spicy amber',
                 badges: ['vanilla', 'spicy', 'amber'],
                 notes: {
-                    top: ['Canela', 'Lavanda', 'Afrutados'],
-                    heart: ['Especias cálidas', 'Aromáticos'],
-                    base: ['Vainilla', 'Ámbar', 'Almizcle']
+                    top: ['Canela', 'Lavanda Silvestre', 'Manzana', 'Bergamota'],
+                    heart: ['Flor de Naranjo', 'Lirio del Valle'],
+                    base: ['Vainilla', 'Ámbar', 'Pachulí', 'Haba Tonka']
                 },
                 prices: { '5ml': 65, '10ml': 120 },
                 image: 'imagenes/afnan9pm.jpeg',
@@ -1188,9 +1401,9 @@
                 category: 'spicy vanilla sweet',
                 badges: ['spicy', 'vanilla', 'sweet'],
                 notes: {
-                    top: ['Café', 'Canela'],
-                    heart: ['Cálido especiado', 'Dulce'],
-                    base: ['Vainilla', 'Ámbar', 'Atalcado']
+                    top: ['Cardamomo', 'Canela', 'Gengibre'],
+                    heart: ['Frutas confitadas', 'Flores Blancas', 'Praliné'],
+                    base: ['Vainilla', 'Café', 'Haba Tonka', 'Benjuí', 'Almizcle']
                 },
                 prices: { '5ml': 65, '10ml': 120 },
                 image: 'imagenes/kramrahqahwa.jpeg',
@@ -1204,9 +1417,9 @@
                 category: 'amber vanilla spicy',
                 badges: ['amber', 'vanilla', 'spicy'],
                 notes: {
-                    top: ['Lavanda', 'Canela', 'Aromático'],
-                    heart: ['Iris', 'Amaderado', 'Cálido especiado'],
-                    base: ['Ámbar', 'Vainilla', 'Atalcado']
+                    top: ['Lavanda', 'Canela', 'Mandarina'],
+                    heart: ['Iris', 'Amaderado', 'Benjuí', 'Mahonial'],
+                    base: ['Ámbar', 'Vainilla', 'Haba Tonka', 'Incienso', 'Pachulí', 'Cedro']
                 },
                 prices: { '5ml': 65, '10ml': 120 },
                 image: 'imagenes/hisconffession.jpeg',
@@ -1220,9 +1433,9 @@
                 category: 'sweet amber fresh',
                 badges: ['sweet', 'amber', 'fresh'],
                 notes: {
-                    top: ['Coco', 'Afrutados', 'Tropical'],
-                    heart: ['Dulce', 'Fresco especiado', 'Amaderado'],
-                    base: ['Ámbar', 'Vainilla', 'Atalcado']
+                    top: ['Piña', 'Gengibre', 'Iris', 'Amaderado'],
+                    heart: ['Coco', 'Notas Amaderadas'],
+                    base: ['Ámbar', 'Sándalo', 'Haba Tonka', 'Ámbar gris']
                 },
                 prices: { '5ml': 65, '10ml': 120 },
                 image: 'imagenes/elarabia.jpeg',
@@ -1237,13 +1450,45 @@
                 badges: ['fresh', 'spicy'],
                 notes: {
                     top: ['Cítrico', 'Fresco', 'Acuático'],
-                    heart: ['Amaderado', 'Almizclado', 'Pachulí'],
-                    base: ['Ámbar', 'Cálido especiado', 'Atalcado']
+                    heart: ['Amaderado', 'Notas Amaderadas', 'Ámbar'],
+                    base: ['Especias', 'Almizcle', 'Pachulí']
                 },
                 prices: { '5ml': 65, '10ml': 120 },
                 image: 'imagenes/turathiblue.jpeg',
                 gradient: 'linear-gradient(135deg, #A9CCE3 0%, #2C3E50 100%)',
                 bottleColor: 'rgba(44, 62, 80, 0.3)'
+            },
+            { 
+                id: 9,
+                name: 'DolceyGabanna Light Blue edt',
+                description: 'Un clásico fresco y vibrante: la explosión cítrica del limón siciliano y la manzana se combinan con un corazón de bambú y jazmín, sobre una base amaderada de cedro y almizcle. Perfecto para la mujer moderna y enérgica.',
+                category: 'fresh',
+                badges: ['citric', 'woody', 'fresh'],
+                notes: {
+                    top: ['Limón Siciliano', 'Manzana', 'Cedro', 'Campanilla'],
+                    heart: ['Bambú', 'Jazmín', 'Rosa Blanca'],
+                    base: ['Cedro', 'Almizcle', 'Ámbar']
+                },
+                prices: { '5ml': 120, '10ml': 200 },
+                image: 'imagenes/lightblue.jpeg',
+             gradient: 'linear-gradient(135deg, #b3e5fc 0%, #ffffff 100%)',
+            bottleColor: 'rgba(179, 229, 252, 0.3)'
+            },
+            {
+                id: 10,
+                name: 'Lattafa Yara',
+                description: 'Una fragancia dulce y envolvente: notas de salida de orquídea y heliotropo con un toque de naranja tangerina, corazón goloso de frutas tropicales, y base de vainilla cremosa con almizcle y sándalo. Un perfume femenino y cautivador.',
+                category: 'vanilla',
+                badges: ['sweet', 'vanilla', 'tropical'],
+                notes: {
+                    top: ['Orquídea', 'Heliotrope', 'Naranja Tangerina'],
+                    heart: ['Acorde Goloso', 'Frutas Tropicales'],
+                    base: ['Vainilla', 'Almizcle', 'Sándalo']
+                 },
+                prices: { '5ml': 60, '10ml': 105 },
+             image: 'imagenes/lattafayara.jpeg',
+             gradient: 'linear-gradient(135deg, #f8bbd0 0%, #b39ddb 100%)',
+            bottleColor: 'rgba(248, 187, 208, 0.3)'
             }
         ];
 
@@ -1260,7 +1505,11 @@
             'spicy': 'badge-spicy',
             'sweet': 'badge-sweet',
             'fresh': 'badge-fresh',
-            'marine': 'badge-marine'
+            'marine': 'badge-marine',
+            'woody': 'badge-woody',
+            'citric': 'badge-citric',
+            'tropical': 'badge-tropical'
+            
         };
 
         const badgeLabels = {
@@ -1269,7 +1518,10 @@
             'spicy': 'Especiado',
             'sweet': 'Dulce',
             'fresh': 'Fresco',
-            'marine': 'Marino'
+            'marine': 'Marino',
+            'woody': 'Amaderado',
+            'citric': 'Cítrico',
+            'tropical': 'Tropical'
         };
 
         // Renderizar productos dinámicamente
@@ -1542,20 +1794,35 @@
             e.target.reset();
         });
 
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
         // Parallax effect on scroll
         window.addEventListener('scroll', () => {
             const molecules = document.querySelectorAll('.molecule');
             const scrolled = window.pageYOffset;
             molecules.forEach((molecule, index) => {
                 const speed = 0.5 + (index * 0.1);
-                molecule.style.transform = `translateY(${scrolled * speed}px)`;
+                molecule.style.transform = `translateY(${scrolled}px)`;
             });
         });
 
-        // Initialize products on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-        });
+        // Initialize
+        renderProducts();
     </script>
 </body>
 </html>
