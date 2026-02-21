@@ -482,6 +482,8 @@
         .badge-woody { background: #A1887F; color: #4D5656; }
         .badge-citric { background: #F7DC6F; color: #B9770E; }
         .badge-tropical { background: #F5B041; color: white; }
+        .badge-aromatic { background: #A3E4D7; color: #117A65; }
+        .badge-musky { background: #D7BDE2; color: #6C3483; }
 
         .product-description {
             color: var(--text-secondary);
@@ -1489,6 +1491,22 @@
              image: 'imagenes/lattafayara.jpeg',
              gradient: 'linear-gradient(135deg, #f8bbd0 0%, #b39ddb 100%)',
             bottleColor: 'rgba(248, 187, 208, 0.3)'
+            },
+            {
+                id: 11,
+                name: 'Nautica Voyage N-83',
+                description: 'Una fragancia fresca y marina que evoca la brisa del océano con un toque aromático y especiado, para un día lleno de energía y frescura.',
+                category: 'fresh',
+                badges: ['marine', 'aromatic', 'musky', 'woody'],
+                notes: {
+                    top: ['Notas Marinas', 'Menta Piperita', 'Petit Grain'],
+                    heart: ['Lavanda', 'Nuez Moscada', 'Cardamomo'],
+                    base: ['Almizcle', 'Cedro', 'Sándalo']
+                },
+                prices: {'5ml': 50, '10ml': 100 },
+                image: 'imagenes/nautican83.png',
+                gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
+            bottleColor: 'rgba(0, 198, 251, 0.2)'
             }
         ];
 
@@ -1508,7 +1526,9 @@
             'marine': 'badge-marine',
             'woody': 'badge-woody',
             'citric': 'badge-citric',
-            'tropical': 'badge-tropical'
+            'tropical': 'badge-tropical',
+            'musky': 'badge-musky',
+            'aromatic': 'badge-aromatic'
             
         };
 
@@ -1521,7 +1541,9 @@
             'marine': 'Marino',
             'woody': 'Amaderado',
             'citric': 'Cítrico',
-            'tropical': 'Tropical'
+            'tropical': 'Tropical',
+            'musky': 'Almizclado',
+            'aromatic': 'Aromático'
         };
 
         // Renderizar productos dinámicamente
