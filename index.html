@@ -484,6 +484,9 @@
         .badge-tropical { background: #F5B041; color: white; }
         .badge-aromatic { background: #A3E4D7; color: #117A65; }
         .badge-musky { background: #D7BDE2; color: #6C3483; }
+        .badge-warm-spicy { background: #E59866; color: white; }
+        .badge-lavender { background: #D2B4DE; color: #512E5F; }
+        .badge-smoky { background: #A6ACAF; color: #424949; }
 
         .product-description {
             color: var(--text-secondary);
@@ -1343,7 +1346,7 @@
                     heart: ['Romero', 'Salvia', 'Geranio'],
                     base: ['Incienso', 'Pachulí']
                 },
-                prices: { '5ml': 165, '10ml': 280 },
+                prices: { '5ml': 150, '10ml': 280 },
                 image: 'imagenes/acqua.jpeg',
                 gradient: 'linear-gradient(135deg, #A9CCE3 0%, #16A085 100%)',
                 bottleColor: 'rgba(22, 160, 133, 0.3)'
@@ -1507,7 +1510,40 @@
                 image: 'imagenes/nautican83.png',
                 gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
             bottleColor: 'rgba(0, 198, 251, 0.2)'
+            },
+            {
+                id: 12,
+                name: 'Invictus Victory Elixir',
+                description: 'Una fragancia intensa y victoriosa que combina lavanda y especias con un fondo dulce de vainilla y haba tonka, para un aroma cálido, ambarino y ahumado.',
+                category: 'vanilla',
+                badges: ['vanilla', 'warm spicy', 'amber', 'lavender', 'smoky'],
+                notes: {
+                    top: ['Lavanda', 'Cardamomo', 'Pimienta Negra'],
+                    heart: ['Incienso', 'Pachulí'],
+                    base: ['Vainilla', 'Haba Tonka']
+                },
+                prices: {'5ml': 150, '10ml': 280},
+                image: 'imagenes/invictuselixir.png',
+                gradient: 'linear-gradient(135deg, #d4af37 0%, #8b4513 100%)',
+                bottleColor: 'rgba(212, 175, 55, 0.2)'
+            },
+            {
+                id: 13,
+                name: 'Jean Paul Gaultier Le Beau Le Parfum',
+                description: 'Una fragancia dulce y sensual que evoca la calidez de un paraíso tropical con un fondo amaderado y sofisticado, perfecta para quienes buscan un aroma envolvente y memorable.',
+                category: 'vanilla',
+                badges: ['sweet', 'vanilla', 'tropical', 'woody'],
+                notes: {
+                    top: ['Piña', 'Iris', 'Jengibre', 'Ciprés'],
+                    heart: ['Coco', 'Notas Amaderadas'],
+                    base: ['Haba Tonka', 'Sándalo', 'Ámbar', 'Ámbar gris'],
+                },
+                prices: {'5ml': 190, '10ml': 350},
+                image: 'imagenes/jeanpaullebeauleparfum.png',
+                gradient: 'linear-gradient(135deg, #a8e063 0%, #56ab2f 100%)',
+                bottleColor: 'rgba(86, 171, 47, 0.2)'
             }
+
         ];
 
         // ========================================
@@ -1528,7 +1564,10 @@
             'citric': 'badge-citric',
             'tropical': 'badge-tropical',
             'musky': 'badge-musky',
-            'aromatic': 'badge-aromatic'
+            'aromatic': 'badge-aromatic',
+            'warm spicy': 'badge-warm-spicy',
+            'lavender': 'badge-lavender',
+            'smoky': 'badge-smoky'
             
         };
 
@@ -1543,7 +1582,11 @@
             'citric': 'Cítrico',
             'tropical': 'Tropical',
             'musky': 'Almizclado',
-            'aromatic': 'Aromático'
+            'aromatic': 'Aromático',
+            'warm spicy': 'Cálido Especiado',
+            'lavender': 'Lavanda',
+            'smoky': 'Ahumado'
+
         };
 
         // Renderizar productos dinámicamente
