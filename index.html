@@ -487,6 +487,9 @@
         .badge-warm-spicy { background: #E59866; color: white; }
         .badge-lavender { background: #D2B4DE; color: #512E5F; }
         .badge-smoky { background: #A6ACAF; color: #424949; }
+        .badge-warm { background: #FAD7A0; color: #B9770E; }
+        .badge-fruity { background: #F1948A; color: white; }
+        .badge-tobacco { background: #A04000; color: white; }
 
         .product-description {
             color: var(--text-secondary);
@@ -1542,6 +1545,22 @@
                 image: 'imagenes/jeanpaullebeauleparfum.png',
                 gradient: 'linear-gradient(135deg, #a8e063 0%, #56ab2f 100%)',
                 bottleColor: 'rgba(86, 171, 47, 0.2)'
+            },
+            {
+                id: 14,
+                name: 'Spicebomb Infrared ViktorRolf',
+                description: 'Una fragancia explosiva y especiada que combina la calidez de la canela y el tabaco con la frescura de las frutas rojas y un toque picante de chile, creando un aroma intenso, seductor y lleno de energía.',
+                category: 'spicy',
+                badges: ['spicy', 'warm', 'fruity', 'tobacco', 'sweet'],
+                notes: {
+                    top: ['Frutas rojas', 'Pimienta rosa', 'Azafrán'],
+                    heart: ['Canela', 'Chile rojo'],
+                    base: ['Tabaco', 'Benjuí'],
+                },
+                prices: { '5ml': 190, '10ml': 350 },
+                image: 'imagenes/spicebomb.jpeg',
+                gradient: 'linear-gradient(135deg, #ff4e50 0%, #f9d423 100%)',
+                bottleColor: 'rgba(255, 78, 80, 0.2)',
             }
 
         ];
@@ -1567,7 +1586,10 @@
             'aromatic': 'badge-aromatic',
             'warm spicy': 'badge-warm-spicy',
             'lavender': 'badge-lavender',
-            'smoky': 'badge-smoky'
+            'smoky': 'badge-smoky',
+            'warm': 'badge-warm',
+            'fruity': 'badge-fruity',
+            'tobacco': 'badge-tobacco'
             
         };
 
@@ -1585,7 +1607,10 @@
             'aromatic': 'Aromático',
             'warm spicy': 'Cálido Especiado',
             'lavender': 'Lavanda',
-            'smoky': 'Ahumado'
+            'smoky': 'Ahumado',
+            'warm': 'Cálido',
+            'fruity': 'Frutal',
+            'tobacco': 'Tabaco'
 
         };
 
