@@ -490,6 +490,7 @@
         .badge-warm { background: #FAD7A0; color: #B9770E; }
         .badge-fruity { background: #F1948A; color: white; }
         .badge-tobacco { background: #A04000; color: white; }
+        .badge-cinnamon { background: #D35400; color: white; }
 
         .product-description {
             color: var(--text-secondary);
@@ -1228,6 +1229,9 @@
             <button class="filter-btn" data-filter="spicy">Especiados</button>
             <button class="filter-btn" data-filter="fresh">Frescos</button>
             <button class="filter-btn" data-filter="amber">Ambarinos</button>
+            <button class="filter-btn" data-filter="boy">Para Hombres</button>
+            <button class="filter-btn" data-filter="girl">Para Mujeres</button>
+             <button class="filter-btn" data-filter="unisex">Unisex</button>
         </div>
 
         <div class="product-grid" id="product-grid">
@@ -1340,17 +1344,17 @@
         const PRODUCTS = [
             {
                 id: 1,
-                name: 'Acqua di Gio Profumo',
-                description: 'Una fragancia acuática que captura la esencia del mar profundo, combinando notas marinas y cítricas con un fondo amaderado y especiado. Frescura intensa con carácter.',
-                category: 'fresh',
-                badges: ['fresh', 'marine'],
+                name: 'Al Haramain Amber Oud Gold Edition',
+                description: 'Una fragancia lujosa y unisex que combina la dulzura frutal y la frescura ozónica con un corazón atalcado y vainilla, sobre una base de ámbar y almizcle, con un toque acuático.',
+                category: 'spicy amber unisex',
+                badges: ['fresh', 'fruity', 'vanilla', 'sweet', 'amber'],
                 notes: {
-                    top: ['Notas del Mar', 'Bergamota'],
-                    heart: ['Romero', 'Salvia', 'Geranio'],
-                    base: ['Incienso', 'Pachulí']
+                    top: ['Notas verdes', 'Bergamota'],
+                    heart: ['Melón', 'Ámbar', 'Piña'],
+                    base: ['Vainilla', 'Notas amaderadas', 'Almizcle']
                 },
-                prices: { '5ml': 150, '10ml': 280 },
-                image: 'imagenes/acqua.jpeg',
+                prices: { '5ml': 140, '10ml': 260 },
+                image: 'imagenes/haramain.jpeg',
                 gradient: 'linear-gradient(135deg, #A9CCE3 0%, #16A085 100%)',
                 bottleColor: 'rgba(22, 160, 133, 0.3)'
             },
@@ -1358,7 +1362,7 @@
                 id: 2,
                 name: 'Jean Paul Gaultier Le Male Elixir',
                 description: 'Un elixir seductor que intensifica la icónica fragancia Le Male con un corazón vainillado y amielado, envuelto en notas de tabaco y un fondo ambarino misterioso.',
-                category: 'vanilla amber',
+                category: 'vanilla amber boy',
                 badges: ['vanilla', 'amber', 'sweet'],
                 notes: {
                     top: ['Lavanda', 'Menta'],
@@ -1374,7 +1378,7 @@
                 id: 3,
                 name: 'Jean Paul Gaultier Le Beau Paradise Garden',
                 description: 'Un jardín tropical embotellado: notas de coco cremoso y frutas exóticas sobre un fondo vainillado y amaderado. Frescura acuática con un toque sensual.',
-                category: 'fresh vanilla',
+                category: 'fresh vanilla boy',
                 badges: ['fresh', 'vanilla', 'sweet'],
                 notes: {
                     top: ['Notas Verdes', 'Menta', 'Gengibre', 'Notas acuáticas'],
@@ -1390,7 +1394,7 @@
                 id: 4,
                 name: 'Afnan 9pm',
                 description: 'Una fragancia nocturna que equilibra dulzura vainillada con especias cálidas y un fondo ambarino. Perfecta para ocasiones especiales.',
-                category: 'vanilla spicy amber',
+                category: 'vanilla spicy amber boy',
                 badges: ['vanilla', 'spicy', 'amber'],
                 notes: {
                     top: ['Canela', 'Lavanda Silvestre', 'Manzana', 'Bergamota'],
@@ -1406,7 +1410,7 @@
                 id: 5,
                 name: 'Kramrah Qahwa',
                 description: 'Una acogedora fragancia inspirada en el café árabe, con notas cálidas de canela y vainilla sobre un fondo especiado. Ideal para días fríos.',
-                category: 'spicy vanilla sweet',
+                category: 'spicy vanilla sweet unisex',
                 badges: ['spicy', 'vanilla', 'sweet'],
                 notes: {
                     top: ['Cardamomo', 'Canela', 'Gengibre'],
@@ -1422,15 +1426,15 @@
                 id: 6,
                 name: 'His Confession',
                 description: 'Una confesión olfativa audaz: ámbar cálido se encuentra con vainilla y especias, creando un aroma sofisticado y adictivo con un toque irisado.',
-                category: 'amber vanilla spicy',
+                category: 'amber vanilla spicy boy',
                 badges: ['amber', 'vanilla', 'spicy'],
                 notes: {
                     top: ['Lavanda', 'Canela', 'Mandarina'],
                     heart: ['Iris', 'Amaderado', 'Benjuí', 'Mahonial'],
                     base: ['Ámbar', 'Vainilla', 'Haba Tonka', 'Incienso', 'Pachulí', 'Cedro']
                 },
-                prices: { '5ml': 65, '10ml': 120 },
-                image: 'imagenes/hisconffession.jpeg',
+                prices: { '5ml': 75, '10ml': 140 },
+                image: 'imagenes/hisconfession.jpeg',
                 gradient: 'linear-gradient(135deg, #FDEBD0 0%, #A1887F 100%)',
                 bottleColor: 'rgba(161, 136, 127, 0.3)'
             },
@@ -1438,7 +1442,7 @@
                 id: 7,
                 name: 'Le Chameau Arabia the Beauty',
                 description: 'Un viaje olfativo a Oriente: dulzura tropical de coco y frutas exóticas sobre un fondo ambarino especiado. Lujoso y envolvente.',
-                category: 'sweet amber fresh',
+                category: 'sweet amber fresh unisex',
                 badges: ['sweet', 'amber', 'fresh'],
                 notes: {
                     top: ['Piña', 'Gengibre', 'Iris', 'Amaderado'],
@@ -1454,7 +1458,7 @@
                 id: 8,
                 name: 'Afnan Turathi Blue',
                 description: 'Frescura cítrica y acuática con un corazón amaderado y almizclado. Un aroma versátil que combina lo mejor de Oriente y Occidente.',
-                category: 'fresh spicy',
+                category: 'fresh spicy boy',
                 badges: ['fresh', 'spicy'],
                 notes: {
                     top: ['Cítrico', 'Fresco', 'Acuático'],
@@ -1470,7 +1474,7 @@
                 id: 9,
                 name: 'DolceyGabanna Light Blue edt',
                 description: 'Un clásico fresco y vibrante: la explosión cítrica del limón siciliano y la manzana se combinan con un corazón de bambú y jazmín, sobre una base amaderada de cedro y almizcle. Perfecto para la mujer moderna y enérgica.',
-                category: 'fresh',
+                category: 'fresh girl',
                 badges: ['citric', 'woody', 'fresh'],
                 notes: {
                     top: ['Limón Siciliano', 'Manzana', 'Cedro', 'Campanilla'],
@@ -1486,7 +1490,7 @@
                 id: 10,
                 name: 'Lattafa Yara',
                 description: 'Una fragancia dulce y envolvente: notas de salida de orquídea y heliotropo con un toque de naranja tangerina, corazón goloso de frutas tropicales, y base de vainilla cremosa con almizcle y sándalo. Un perfume femenino y cautivador.',
-                category: 'vanilla',
+                category: 'vanilla girl',
                 badges: ['sweet', 'vanilla', 'tropical'],
                 notes: {
                     top: ['Orquídea', 'Heliotrope', 'Naranja Tangerina'],
@@ -1502,7 +1506,7 @@
                 id: 11,
                 name: 'Nautica Voyage N-83',
                 description: 'Una fragancia fresca y marina que evoca la brisa del océano con un toque aromático y especiado, para un día lleno de energía y frescura.',
-                category: 'fresh',
+                category: 'fresh boy',
                 badges: ['marine', 'aromatic', 'musky', 'woody'],
                 notes: {
                     top: ['Notas Marinas', 'Menta Piperita', 'Petit Grain'],
@@ -1518,7 +1522,7 @@
                 id: 12,
                 name: 'Invictus Victory Elixir',
                 description: 'Una fragancia intensa y victoriosa que combina lavanda y especias con un fondo dulce de vainilla y haba tonka, para un aroma cálido, ambarino y ahumado.',
-                category: 'vanilla',
+                category: 'vanilla boy',
                 badges: ['vanilla', 'warm spicy', 'amber', 'lavender', 'smoky'],
                 notes: {
                     top: ['Lavanda', 'Cardamomo', 'Pimienta Negra'],
@@ -1534,7 +1538,7 @@
                 id: 13,
                 name: 'Jean Paul Gaultier Le Beau Le Parfum',
                 description: 'Una fragancia dulce y sensual que evoca la calidez de un paraíso tropical con un fondo amaderado y sofisticado, perfecta para quienes buscan un aroma envolvente y memorable.',
-                category: 'vanilla',
+                category: 'vanilla boy',
                 badges: ['sweet', 'vanilla', 'tropical', 'woody'],
                 notes: {
                     top: ['Piña', 'Iris', 'Jengibre', 'Ciprés'],
@@ -1550,7 +1554,7 @@
                 id: 14,
                 name: 'Spicebomb Infrared ViktorRolf',
                 description: 'Una fragancia explosiva y especiada que combina la calidez de la canela y el tabaco con la frescura de las frutas rojas y un toque picante de chile, creando un aroma intenso, seductor y lleno de energía.',
-                category: 'spicy',
+                category: 'spicy boy',
                 badges: ['spicy', 'warm', 'fruity', 'tobacco', 'sweet'],
                 notes: {
                     top: ['Frutas rojas', 'Pimienta rosa', 'Azafrán'],
@@ -1561,6 +1565,118 @@
                 image: 'imagenes/spicebomb.jpeg',
                 gradient: 'linear-gradient(135deg, #ff4e50 0%, #f9d423 100%)',
                 bottleColor: 'rgba(255, 78, 80, 0.2)',
+            },
+            {
+                id: 15,
+                name: 'Rasasi Hawas Ice',
+                description: 'Una explosión de frescura acuática y frutal con un toque especiado, corazón de flores blancas y base almizclada y atalcada, evocando el hielo en un día caluroso.',
+                category: 'fresh boy',
+                badges: ['fresh', 'citric', 'tropical', 'woody'],
+                notes: {
+                    top: ['Manzana', 'Cítricos', 'Anís estrellado'],
+                    heart: ['Flores blancas', 'Ciruela', 'Cardamomo'],
+                    base: ['Almizclada', 'Ámbar', 'Musgo']
+                },
+                prices: {'5ml': 100, '10ml': 200},
+                image: 'imagenes/hawas ice.jpeg',
+                gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
+                bottleColor: 'rgba(0, 198, 251, 0.2)'
+            },
+            {
+                id: 16,
+                name: 'Club De Nuit Urban Elixir Armaf',
+                description: 'Fragancia audaz y moderna que combina la frescura cítrica y especiada con un corazón de lavanda y un fondo amaderado y almizclado, perfecta para la noche urbana.',
+                category: 'fresh boy',
+                badges: ['fresh', 'citric', 'woody', 'lavender', 'amber'],
+                notes: {
+                    top: ['Bergamota', 'Jazmín', 'Pimienta rosa'],
+                    heart: ['Lavanda', 'Geranio', 'Azafrán'],
+                    base: ['Ládano', 'Ámbar', 'Cedro']
+                },
+                prices: {'5ml': 90, '10ml': 170},
+                image: 'imagenes/clubdenuit.jpeg',
+                gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
+                bottleColor: 'rgba(0, 198, 251, 0.2)'
+            },
+            {
+                id: 17,
+                name: 'Scuderia Ferrari Black',
+                description: 'Fragancia deportiva y elegante con notas frutales y especiadas, destacando la canela y la vainilla, con un toque fresco y atalcado.',
+                category: 'spicy boy',
+                badges: ['spicy', 'warm', 'fruity', 'cinnamon', 'vanilla'],
+                notes: {
+                    top: ['Manzana', 'Ciruela', 'Cítricos'],
+                    heart: ['Rosa', 'Cardamomo', 'Canela'],
+                    base: ['Almizcle', 'Ámbar', 'Vainilla']
+                },
+                prices: {'5ml': 75, '10ml': 140},
+                image: 'imagenes/scuderiablack.jpeg',
+                gradient: 'linear-gradient(135deg, #ff4e50 0%, #f9d423 100%)',
+                bottleColor: 'rgba(255, 78, 80, 0.2)',
+            },
+            {
+                id: 18,
+                name: 'Yeah! Maison Alhambra',
+                description: 'Fragancia vibrante y juvenil que fusiona la frescura especiada con acordes afrutados y amaderados, ideal para el día a día.',
+                category: 'fresh boy',
+                badges: ['fresh', 'citric', 'tropical', 'woody'],
+                notes: {
+                    top: ['Manzana', 'Bergamota', 'Jengibre'],
+                    heart: ['Salvia', 'Bayas de enebro', 'Geranio'],
+                    base: ['Amberwood', 'Haba Tonka', 'Cedro']
+                },
+                prices: {'5ml': 70, '10ml': 130},
+                image: 'imagenes/yeahman.jpeg',
+                gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
+                bottleColor: 'rgba(0, 198, 251, 0.2)'
+            },
+            {
+                id: 19,
+                name: 'Odyssey Mandarin Sky Armaf',
+                description: 'Una fragancia celestial que combina la chispa cítrica de la mandarina con un corazón de caramelo y vainilla, sobre un fondo ambarado y amaderado.',
+                category: 'amber boy',
+                badges: ['amber', 'citric', 'sweet'],
+                notes: {
+                    top: ['Mandarina', 'Naranja', 'Azafrán'],
+                    heart: ['Caramelo', 'Haba Tonka'],
+                    base: ['Ambroxan', 'Cedro', 'Vetiver']
+                },
+                prices: {'5ml': 100, '10ml': 200},
+                image: 'imagenes/mandarin.jpeg',
+                gradient: 'linear-gradient(135deg, #ff4e50 0%, #f9d423 100%)',
+                bottleColor: 'rgba(255, 78, 80, 0.2)'
+            },
+            {
+               id: 20,
+               name: 'Lattafa Yara Candy',
+               description: 'Una fragancia golosa y afrutada con un toque empolvado y floral, ideal para quienes buscan un aroma dulce, cremoso y ligeramente especiado.',
+               category: 'vanilla girl',
+               badges: ['sweet', 'vanilla', 'fruity', 'tropical'],
+               notes: {
+                   top: ['Grosellas negras', 'Mandarina verde'],
+                   heart: ['Caramelo de fresa efervescente','Gardenia'],
+                   base: ['Vainilla', 'Almizcle', 'Sándalo', 'Ámbar']
+               },
+               prices: {'5ml': 70, '10ml': 125},
+               image: 'imagenes/yaracandy.jpeg',
+               gradient: 'linear-gradient(135deg, #f8bbd0 0%, #b39ddb 100%)',
+               bottleColor: 'rgba(248, 187, 208, 0.3)'
+            },
+            {
+                id: 21,
+                name: 'Explorer Platinum Montblanc',
+                description: 'Una fragancia fresca y sofisticada que evoca la naturaleza salvaje con notas amaderadas, aromáticas y ozónicas, con un toque acuático y especiado suave.',
+                category: 'fresh boy',
+                badges: ['fresh', 'woody', 'aromatic', 'marine'],
+                notes: {
+                    top: ['Hojas de violeta'],
+                    heart: ['Esclarea'],
+                    base: ['Cedro']
+                },
+                prices: {'5ml': 120, '10ml': 210},
+                image: 'imagenes/montblanc.jpeg',
+                gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
+                bottleColor: 'rgba(0, 198, 251, 0.2)'
             }
 
         ];
@@ -1589,7 +1705,8 @@
             'smoky': 'badge-smoky',
             'warm': 'badge-warm',
             'fruity': 'badge-fruity',
-            'tobacco': 'badge-tobacco'
+            'tobacco': 'badge-tobacco',
+            'cinnamon': 'badge-cinnamon'
             
         };
 
@@ -1610,7 +1727,8 @@
             'smoky': 'Ahumado',
             'warm': 'Cálido',
             'fruity': 'Frutal',
-            'tobacco': 'Tabaco'
+            'tobacco': 'Tabaco',
+            'cinnamon': 'Canela'
 
         };
 
