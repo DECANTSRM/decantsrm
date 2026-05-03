@@ -496,6 +496,8 @@
         .badge-fruity { background: #F1948A; color: white; }
         .badge-tobacco { background: #A04000; color: white; }
         .badge-cinnamon { background: #D35400; color: white; }
+        .badge-mineral { background: #85929E; color: #2C3E50; }
+        .badge-herbal { background: #82B74B; color: #1A5C00; }
 
         .product-description {
             color: var(--text-secondary);
@@ -1684,6 +1686,54 @@
                 image: 'imagenes/montblanc.jpeg',
                 gradient: 'linear-gradient(135deg, #00c6fb 0%, #005bea 100%)',
                 bottleColor: 'rgba(0, 198, 251, 0.2)'
+            },
+            {
+                id: 22,
+                name: 'Le Male Le Parfum Jean Paul Gaultier',
+                description: 'Una fragancia oriental y especiada con un toque cálido y amaderado. El cardamomo y la lavanda se fusionan con un fondo profundo de vainilla, maderas y notas orientales.',
+                category: 'spicy boy',
+                badges: ['spicy', 'warm', 'vanilla', 'lavender'],
+                notes: {
+                    top: ['Cardamomo'],
+                    heart: ['Lavanda', 'Iris'],
+                    base: ['Vainilla', 'Notas orientales', 'Notas amaderadas'],
+                },
+                prices: {'5ml': 190, '10ml': 360},
+                image: 'imagenes/jpglemalep.jpg',
+                gradient: 'linear-gradient(135deg, #1c1c1c 0%, #000000 100%)',
+                bottleColor: 'rgba(0, 0, 0, 0.2)'
+            },
+            {
+                id: 23,
+                name: 'Valentino Uomo Born In Roma',
+                description: 'Una fragancia moderna y mineral con un toque salino y herbal. La salvia y el jengibre se combinan con notas verdes, violeta y un fondo amaderado y de vetiver.',
+                category: 'fresh boy',
+                badges: ['mineral', 'fresh', 'herbal', 'woody'],
+                notes: {
+                    top: ['Notas minerales', 'Hojas de violeta', 'Sal'],
+                    heart: ['Salvia', 'jengibre'],
+                    base: ['Notas amaderadas', 'Vetiver']
+                },
+                prices: {'5ml': 270, '10ml': 500},
+                image: 'imagenes/valentinobir.jpg',
+                gradient: 'linear-gradient(135deg, #2a2a2a 0%, #000000 100%)',
+                bottleColor: 'rgba(0, 0, 0, 0.2)'
+            },
+            {
+                id: 24,
+                name: 'Versace Eros Flame',
+                description: 'Una fragancia intensa y vibrante con notas cítricas ardientes y especiadas. El romero y la pimienta de Madagascar lideran sobre un corazón floral y una base robusta de maderas exóticas y vainilla.',
+                category: 'spicy boy',
+                badges: ['citric', 'spicy', 'woody', 'sweet'],
+                notes: {
+                    top: ['Mandarina', 'Pimienta de Madagascar', 'Romero', 'Limón (Lima ácida)', 'Chinotto'],
+                    heart: ['Geranio', 'Rosa', 'Pepperwood'],
+                    base: ['Vainilla', 'Haba tonka', 'Sándalo', 'Cedro de Texas', 'Pachulí', 'Musgo de roble']
+                },
+                prices: {'5ml': 170, '10ml': 320},
+                image: 'imagenes/versaceef.jpg',
+                gradient: 'linear-gradient(135deg, #C21807 0%, #800000 100%)',
+                bottleColor: 'rgba(194, 24, 7, 0.2)'
             }
 
         ];
@@ -1713,7 +1763,9 @@
             'warm': 'badge-warm',
             'fruity': 'badge-fruity',
             'tobacco': 'badge-tobacco',
-            'cinnamon': 'badge-cinnamon'
+            'cinnamon': 'badge-cinnamon',
+            'mineral': 'badge-mineral',
+            'herbal': 'badge-herbal',
             
         };
 
@@ -1735,7 +1787,9 @@
             'warm': 'Cálido',
             'fruity': 'Frutal',
             'tobacco': 'Tabaco',
-            'cinnamon': 'Canela'
+            'cinnamon': 'Canela',
+            'mineral': 'Mineral',
+            'herbal': 'Herbal'
 
         };
 
