@@ -5,6 +5,7 @@
         const PRODUCTS = [
             {
                 id: 1,
+                order: 50,
                 name: 'Al Haramain Amber Oud Gold Edition',
                 description: 'Una fragancia lujosa y unisex que combina la dulzura frutal y la frescura ozónica con un corazón atalcado y vainilla, sobre una base de ámbar y almizcle, con un toque acuático.',
                 category: 'spicy amber unisex',
@@ -21,6 +22,7 @@
             },
             {
                 id: 2,
+                order: 150,
                 name: 'Jean Paul Gaultier Le Male Elixir',
                 description: 'Un elixir seductor que intensifica la icónica fragancia Le Male con un corazón vainillado y amielado, envuelto en notas de tabaco y un fondo ambarino misterioso.',
                 category: 'vanilla amber boy',
@@ -37,6 +39,7 @@
             },
             {
                 id: 3,
+                order: 140,
                 name: 'Jean Paul Gaultier Le Beau Paradise Garden',
                 description: 'Un jardín tropical embotellado: notas de coco cremoso y frutas exóticas sobre un fondo vainillado y amaderado. Frescura acuática con un toque sensual.',
                 category: 'fresh vanilla boy',
@@ -53,6 +56,7 @@
             },
             {
                 id: 4,
+                order: 20,
                 name: 'Afnan 9pm',
                 description: 'Una fragancia nocturna que equilibra dulzura vainillada con especias cálidas y un fondo ambarino. Perfecta para ocasiones especiales.',
                 category: 'vanilla spicy amber boy',
@@ -69,6 +73,7 @@
             },
             {
                 id: 5,
+                order: 170,
                 name: 'Kramrah Qahwa',
                 description: 'Una acogedora fragancia inspirada en el café árabe, con notas cálidas de canela y vainilla sobre un fondo especiado. Ideal para días fríos.',
                 category: 'spicy vanilla unisex',
@@ -85,6 +90,7 @@
             },
             {
                 id: 6,
+                order: 110,
                 name: 'His Confession',
                 description: 'Una confesión olfativa audaz: ámbar cálido se encuentra con vainilla y especias, creando un aroma sofisticado y adictivo con un toque irisado.',
                 category: 'amber vanilla spicy boy',
@@ -101,6 +107,7 @@
             },
             {
                 id: 7,
+                order: 220,
                 name: 'Le Chameau Arabia the Beauty',
                 description: 'Un viaje olfativo a Oriente: dulzura tropical de coco y frutas exóticas sobre un fondo ambarino especiado. Lujoso y envolvente.',
                 category: 'amber unisex',
@@ -117,6 +124,7 @@
             },
             {
                 id: 8,
+                order: 30,
                 name: 'Afnan Turathi Blue',
                 description: 'Frescura cítrica y acuática con un corazón amaderado y almizclado. Un aroma versátil que combina lo mejor de Oriente y Occidente.',
                 category: 'fresh spicy boy',
@@ -133,6 +141,7 @@
             },
             { 
                 id: 9,
+                order: 90,
                 name: 'DolceyGabanna Light Blue edt',
                 description: 'Un clásico fresco y vibrante: la explosión cítrica del limón siciliano y la manzana se combinan con un corazón de bambú y jazmín, sobre una base amaderada de cedro y almizcle. Perfecto para la mujer moderna y enérgica.',
                 category: 'fresh girl',
@@ -149,6 +158,7 @@
             },
             {
                 id: 10,
+                order: 190,
                 name: 'Lattafa Yara',
                 description: 'Una fragancia dulce y envolvente: notas de salida de orquídea y heliotropo con un toque de naranja tangerina, corazón goloso de frutas tropicales, y base de vainilla cremosa con almizcle y sándalo. Un perfume femenino y cautivador.',
                 category: 'vanilla girl',
@@ -165,6 +175,7 @@
             },
             {
                 id: 11,
+                order: 250,
                 name: 'Nautica Voyage N-83',
                 description: 'Una fragancia fresca y marina que evoca la brisa del océano con un toque aromático y especiado, para un día lleno de energía y frescura.',
                 category: 'fresh boy',
@@ -181,6 +192,7 @@
             },
             {
                 id: 12,
+                order: 120,
                 name: 'Invictus Victory Elixir',
                 description: 'Una fragancia intensa y victoriosa que combina lavanda y especias con un fondo dulce de vainilla y haba tonka, para un aroma cálido, ambarino y ahumado.',
                 category: 'vanilla spicy boy',
@@ -197,6 +209,7 @@
             },
             {
                 id: 13,
+                order: 130,
                 name: 'Jean Paul Gaultier Le Beau Le Parfum',
                 description: 'Una fragancia dulce y sensual que evoca la calidez de un paraíso tropical con un fondo amaderado y sofisticado, perfecta para quienes buscan un aroma envolvente y memorable.',
                 category: 'vanilla amber boy',
@@ -213,6 +226,7 @@
             },
             {
                 id: 14,
+                order: 310,
                 name: 'Spicebomb Infrared ViktorRolf',
                 description: 'Una fragancia explosiva y especiada que combina la calidez de la canela y el tabaco con la frescura de las frutas rojas y un toque picante de chile, creando un aroma intenso, seductor y lleno de energía.',
                 category: 'spicy boy',
@@ -229,6 +243,7 @@
             },
             {
                 id: 15,
+                order: 260,
                 name: 'Rasasi Hawas Ice',
                 description: 'Una explosión de frescura acuática y frutal con un toque especiado, corazón de flores blancas y base almizclada y atalcada, evocando el hielo en un día caluroso.',
                 category: 'fresh boy',
@@ -245,6 +260,7 @@
             },
             {
                 id: 16,
+                order: 60,
                 name: 'Club De Nuit Urban Elixir Armaf',
                 description: 'Fragancia audaz y moderna que combina la frescura cítrica y especiada con un corazón de lavanda y un fondo amaderado y almizclado, perfecta para la noche urbana.',
                 category: 'fresh boy',
@@ -261,6 +277,7 @@
             },
             {
                 id: 17,
+                order: 270,
                 name: 'Scuderia Ferrari Black',
                 description: 'Fragancia deportiva y elegante con notas frutales y especiadas, destacando la canela y la vainilla, con un toque fresco y atalcado.',
                 category: 'spicy boy',
@@ -277,6 +294,7 @@
             },
             {
                 id: 18,
+                order: 230,
                 name: 'Yeah! Maison Alhambra',
                 description: 'Fragancia vibrante y juvenil que fusiona la frescura especiada con acordes afrutados y amaderados, ideal para el día a día.',
                 category: 'fresh boy',
@@ -293,6 +311,7 @@
             },
             {
                 id: 19,
+                order: 80,
                 name: 'Odyssey Mandarin Sky Armaf',
                 description: 'Una fragancia celestial que combina la chispa cítrica de la mandarina con un corazón de caramelo y vainilla, sobre un fondo ambarado y amaderado.',
                 category: 'amber boy',
@@ -309,6 +328,7 @@
             },
             {
                id: 20,
+               order: 200,
                name: 'Lattafa Yara Candy',
                description: 'Una fragancia golosa y afrutada con un toque empolvado y floral, ideal para quienes buscan un aroma dulce, cremoso y ligeramente especiado.',
                category: 'vanilla girl',
@@ -325,6 +345,7 @@
             },
             {
                 id: 21,
+                order: 240,
                 name: 'Explorer Platinum Montblanc',
                 description: 'Una fragancia fresca y sofisticada que evoca la naturaleza salvaje con notas amaderadas, aromáticas y ozónicas, con un toque acuático y especiado suave.',
                 category: 'fresh boy',
@@ -341,6 +362,7 @@
             },
             {
                 id: 22,
+                order: 160,
                 name: 'Le Male Le Parfum Jean Paul Gaultier',
                 description: 'Una fragancia oriental y especiada con un toque cálido y amaderado. El cardamomo y la lavanda se fusionan con un fondo profundo de vainilla, maderas y notas orientales.',
                 category: 'spicy vanilla boy',
@@ -357,6 +379,7 @@
             },
             {
                 id: 23,
+                order: 280,
                 name: 'Valentino Uomo Born In Roma',
                 description: 'Una fragancia moderna y mineral con un toque salino y herbal. La salvia y el jengibre se combinan con notas verdes, violeta y un fondo amaderado y de vetiver.',
                 category: 'fresh boy',
@@ -373,6 +396,7 @@
             },
             {
                 id: 24,
+                order: 300,
                 name: 'Versace Eros Flame',
                 description: 'Una fragancia intensa y vibrante con notas cítricas ardientes y especiadas. El romero y la pimienta de Madagascar lideran sobre un corazón floral y una base robusta de maderas exóticas y vainilla.',
                 category: 'spicy boy',
@@ -389,6 +413,7 @@
             },
             {
                 id: 25,
+                order: 290,
                 name: 'Valentino Uomo Born In Roma Coral Fantasy',
                 description: 'Una fragancia vibrante y aromática que fusiona la frescura cítrica de la bergamota y la manzana roja con el toque especiado y cautivador del cardamomo. En su corazón, la lavanda y el geranio bourbon aportan una elegancia floral y herbácea, mientras que en su base, las hojas de tabaco, el pachulí y el vetiver de Haití le otorgan una calidez amaderada, dulce y profundamente adictiva.',
                 category: 'spicy boy',
@@ -405,6 +430,7 @@
             },
             {
                 id: 26,
+                order: 10,
                 name: 'Afnan 9am Dive',
                 description: 'Una fragancia vibrante, fresca y unisex que abre con una explosión cítrica de limón y menta, endulzada por grosellas negras y un toque picante de pimienta rosa. El corazón revela una combinación de manzana y cedro que se funde con la profundidad ahumada del incienso. La base de jengibre, sándalo, pachulí y jazmín le otorga un final amaderado, especiado y sumamente adictivo.',
                 category: 'fresh unisex',
@@ -421,6 +447,7 @@
             },
             {
                 id: 27,
+                order: 40,
                 name: 'Al Haramain Amber Oud Aqua Dubai',
                 description: 'Una fragancia refrescante y vibrante para hombres y mujeres, que abre con una explosión de notas verdes y cítricos energizantes. En su corazón, el dulzor del melón y la piña se fusiona con la calidez del ámbar y el toque ácido de la grosella negra, creando un contraste fascinante. Su base profunda de almizcle, petit grain, gálbano y vainilla le otorga una estela limpia, aromática y sumamente adictiva.',
                 category: 'fresh unisex',
@@ -437,6 +464,7 @@
             },
             {
                 id: 28,
+                order: 320,
                 name: 'Armaf Odyssey Mandarin Sky',
                 description: 'Una fragancia vibrante y adictiva para hombres que comienza con una explosión cítrica de mandarina y naranja, realzada por el toque especiado y exótico del azafrán y la salvia. En su corazón, el caramelo y el haba tonka se combinan con la flor de cempasúchil para crear un dulzor profundo y floral. Su base de ambroxan, cedro y vetiver le otorga una fijación amaderada, moderna y aromática de larga duración.',
                 category: 'boy amber',
@@ -453,6 +481,7 @@
             },
             {
                 id: 29,
+                order: 180,
                 name: 'Lattafa Mayar Natural Intense',
                 description: 'Una fragancia refrescante, floral y acuática diseñada para mujeres, que comienza con una explosión tropical y frutal de mandarina verde, higo, agua de coco y melón. Su corazón se sumerge en un jardín acuático con delicadas notas de flor de loto, nenúfar y jazmín, aportando una suavidad etérea. La base de almizcle, ambroxan, vainilla y sándalo asegura una estela cálida, aterciopelada y duradera, perfecta para el día a día.',
                 category: 'girl fresh',
@@ -469,6 +498,7 @@
             },
             {
                 id: 30,
+                order: 210,
                 name: 'Lattafa Yara Elixir',
                 description: 'Una fragancia dulce, floral y empolvada diseñada para mujeres, que despierta los sentidos desde la salida con el delicioso y goloso aroma de S\'mores de Fresa y el toque ácido de las grosellas negras. El corazón se engalana con la delicadeza del jazmín y la flor de azahar del naranjo. En su base, una mezcla adictiva de vainilla, caramelo, ámbar y almizcle deja una estela cálida, aterciopelada y profundamente sensual.',
                 category: 'vanilla girl',
@@ -485,6 +515,7 @@
             },
             {
                 id: 31,
+                order: 70,
                 name: 'Armaf Odyssey Aqua Edition',
              description: 'Una fragancia aromática, cítrica y profundamente refrescante para hombres. Su salida explota con la energía de la naranja y la toronja, matizadas por el toque herbáceo y amargo del abrótano. En el corazón, la menta y la lavanda aportan una sensación de limpieza y frescura absoluta. La base de ambroxan, ciprés y pachulí le otorga un fondo amaderado, verde y almizclado que le asegura una gran durabilidad y proyección.',
              category: 'fresh boy',
@@ -501,6 +532,7 @@
             },
             {
                 id: 32,
+                order: 100,
                 name: 'Giorgio Armani Acqua di Giò Profondo',
                 description: 'Una fragancia aromática y marina que evoca las profundidades del océano. La salida refrescante de notas marinas, Aquozone, bergamota y mandarina verde da paso a un corazón herbáceo y especiado de romero, lavanda, ciprés y resina almáciga del lentisco. En la base, las notas minerales se mezclan con almizcle, pachulí y ámbar para crear una estela profunda, amaderada y de gran longevidad.',
                 category: 'amber fresh boy',
@@ -588,10 +620,13 @@
         // Renderizar productos dinámicamente
         // Devuelve los productos que coinciden con el filtro activo
         function getFilteredProducts() {
+            let filtered;
             if (currentFilter === 'all') {
-                return PRODUCTS;
+                filtered = PRODUCTS;
+            } else {
+                filtered = PRODUCTS.filter(product => product.category.includes(currentFilter));
             }
-            return PRODUCTS.filter(product => product.category.includes(currentFilter));
+            return filtered.slice().sort((a, b) => a.order - b.order); // Ordenar por el campo 'order'
         }
 
         function renderProducts() {
